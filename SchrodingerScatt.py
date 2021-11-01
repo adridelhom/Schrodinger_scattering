@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.integrate as integrate
 from matplotlib.animation import FuncAnimation
+import matplotlib.animation
 
 
 def phi(k):
@@ -34,4 +35,5 @@ ax = plt.axes(xlim=(-10,10), ylim=(0,0.8))
 line, = ax.plot([], [], lw=3)
 
 anim = FuncAnimation(fig, plot_amp, init_func=plot_amp(0), frames=100, interval=20)
-anim.save('basic_animation.mp4', fps=10, extra_args=['-vcodec', 'libx264'])
+anim.save('mymovie.mp4', fps=10, writer = matplotlib.animation.FFMpegWriter())
+
