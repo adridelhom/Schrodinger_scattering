@@ -13,6 +13,7 @@ def phi(k):
 
 def psi(x,t,k):
     return [1/np.sqrt(4*np.pi)*phi(k)*np.cos(1*(k*x-k**2/2*t)), 1/np.sqrt(4*np.pi)*phi(k)*np.sin(1*(k*x-k**2/2*t))]
+    # cos and sin are the eigenvectors of the free particle. For a potential place its eigenvectors as functions obtained elsewhere
 
 def plot_amp(t):
     limxs = 10.0
